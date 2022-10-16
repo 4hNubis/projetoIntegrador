@@ -13,6 +13,7 @@
         <!-- iconis  -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+        
     </head>
     <body>
         <header>
@@ -35,7 +36,7 @@
             <!-- O Expositor De Produtos, como o nome sugere, será onde os produtos serão adicionados. -->
             <!-- Podendo futuramente ter a função de adicionar e remover produtos atraves do JavaScript. -->
             <!-- Sendo asim tornando o site mais dinamico e pratico para o cliente. -->
-            <div class="row">
+            <div id="expositor" class="row">
                 <!-- Em Produto e feita a construção da exibição dos profutos -->
                 <div class="produto"><a href="">
                     <div class="imgProduto"><img src="imgProdutos/brigadeiro.png" alt="brigadeiro"></div>
@@ -44,5 +45,14 @@
                     <div><i class="material-icons"></i></div>
                 </a></div>
             </div>
+            <button onclick="add()"></button>
         </div>
+
+        <script>
+            function add() {
+                let element = document.querySelector("#expositor");
+                element.innerHTML += " <div class='produto'><a href=''><div class='imgProduto'><img src='imgProdutos/bolo.png' alt='brigadeiro'></div><div class='nomeProduto'>Brigadeiro</div><div class='valorProduto'>R$ 3.00</div><div><i class='material-icons'></i></div></a></div> ";
+            }
+
+        </script>
 </html>

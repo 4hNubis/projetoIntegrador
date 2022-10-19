@@ -1,0 +1,95 @@
+/* DekasConfeitaria Page */
+
+/* #body{
+    box-sizing: border-box;
+    margin: 100px 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} */
+
+header {
+    /* position: fixed; */
+    width: 100%;
+}
+
+.navBar{
+    top: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.divPesquisa{
+   display: inherit;  
+   border: solid 2px;
+   border-radius: 15px;
+   padding: 0px 10px;
+
+   align-items: center;
+}
+#pesquisa{
+    margin: 0;
+    color: white;
+    background-color:transparent;
+    font-style:italic;
+    border:none;
+
+}
+
+.navMenu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-iten:hover{
+    background-color: #BA5659;
+    box-shadow: 5px 5px rgba(83, 83, 83, 0.521);
+} 
+
+div.container{
+    margin-top: 100px;
+
+    text-align: center;
+}
+
+#produto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+img{
+    width: 250px;
+    height: 250px;
+}
+
+.erro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login Page */
+
+#loginPage{
+    margin-top: 10%;
+    width: 30%;
+}
+
+/* Register Page */
+
+#registerPage{
+    margin-top: 8.5%;
+    width: 40% ;
+}
+

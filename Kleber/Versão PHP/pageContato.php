@@ -8,7 +8,7 @@
     <!-- Reseta os padrões dos navegadores -->
     <link rel="stylesheet" href="stylePagina/reset.css">
         <!-- Style da pagina -->
-        <link rel="stylesheet" href="stylePagina/styleHome.css">
+        <link rel="stylesheet" href="stylePagina/stylePages.css">
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <!-- Compiled and minified JavaScript -->
@@ -19,7 +19,10 @@
 </head>
 <body>
 
-    <?php include_once 'header.php' ?>
+    <?php 
+    include_once 'header.php';?>
+    <script>console.log('<?php echo session_id() ;?>')</script>
+
     
 </body>
 </html>

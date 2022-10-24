@@ -8,7 +8,7 @@
         <!-- Reseta os padrões dos navegadores -->
         <link rel="stylesheet" href="stylePagina/reset.css">
         <!-- Style da pagina -->
-        <link rel="stylesheet" href="stylePagina/styleHome.css">
+        <link rel="stylesheet" href="stylePagina/stylePages.css">
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <!-- Compiled and minified JavaScript -->
@@ -19,7 +19,10 @@
     </head>
     <body>
         
-        <?php include_once 'header.php'; ?>
+        <?php
+        include 'funcoesPHP/iniciaSessao.php'; 
+        include_once 'header.php'; ?>
+        <script>console.log('<?php echo session_id() ;?>')</script>
 
         <!-- Conteiner sera basicamente aonde sera montado todo o conteudo das paginas -->
         <div class="container">
@@ -30,31 +33,7 @@
             <div id="expositor" class="row">
                 <!-- Aqui sera feita a construção dos produtos -->
                 <!-- Abrindo uma busca no SQL para achar os produtos -->
-                <?php
-                    $sql="SELECT * FROM produto";
-                    $resultado= mysqli_query($connect,$sql);
-                    if (mysqli_num_rows($resultado)>0):
-                        while($dados =mysqli_fetch_array($resultado)):	
-			    ?>
-                            <!-- Esqueleto de cada produto -->
-                            <div id="produto" class="col s12 m6 l4"><a href="">
-                                <div class="imgProduto"><img id="img" src=<?php echo $dados['srcIMG'] ?> alt="brigadeiro"></div>
-                                <div class="nomeProduto"><?php echo $dados['nomeProdu'] ?></div>
-                                <div class="valorProduto"><?php echo $dados['valProdu'] ?></div>
-                                <div><i class="material-icons"></i></div>
-                            </a></div>
-                        
-                        <?php 
-                        endwhile; 
-                        else: ?>
-                    <!-- Se não for acahado nada no BD -->
-                    <div class="erro">
-                        <h3>Erro</h3>
-                        <h4>Tente novamente mais tarde</h4>
-                    </div>
-                    <?php
-                    endif;
-                    ?>
+                <?php include_once 'funcoesPHP/construtorProduto.php'; ?>
                     
             </div>
         </div>

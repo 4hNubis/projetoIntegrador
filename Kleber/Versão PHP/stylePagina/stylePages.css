@@ -1,15 +1,5 @@
 /* DekasConfeitaria Page */
 
-/* #body{
-    box-sizing: border-box;
-    margin: 100px 0px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-} */
-
 header {
     /* position: fixed; */
     width: 100%;
@@ -59,6 +49,7 @@ div.container{
     text-align: center;
 }
 
+/* Contrutor Produto */
 #produto{
     display: flex;
     flex-direction: column;
@@ -73,23 +64,20 @@ img{
     height: 250px;
 }
 
-.erro{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 /* Login Page */
 
-#loginPage{
-    margin-top: 10%;
-    width: 30%;
-}
+
 
 /* Register Page */
 
-#registerPage{
-    margin-top: 8.5%;
-    width: 40% ;
-}
 
+
+/* Mensagem de Erro */
+.msgErro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-style: italic;
+    font-size: large;
+}

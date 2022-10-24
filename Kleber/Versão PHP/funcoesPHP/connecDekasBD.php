@@ -3,7 +3,7 @@
     $servername = "localhost"; //endereço do servidor
     $username="root";
     $password="usbw";
-    $db_name="bd_Dekas";
+    $db_name="bd_dekas";
 
     //pdo - somente orientado objeto
     $connect =mysqli_connect($servername,$username,$password,$db_name);

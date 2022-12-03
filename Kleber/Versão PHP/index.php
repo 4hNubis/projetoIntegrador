@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,23 +20,61 @@
     <body>
         
         <?php
-        include 'funcoesPHP/iniciaSessao.php'; 
-        include_once 'header.php'; ?>
-        <script>console.log('<?php echo session_id() ;?>')</script>
+        include_once 'header.php';
+        ?>
+       
 
         <!-- Conteiner sera basicamente aonde sera montado todo o conteudo das paginas -->
         <div class="container">
-            <h1>Produtos</h1>
             <!-- O Expositor De Produtos, como o nome sugere, será onde os produtos serão adicionados. -->
             <!-- Podendo futuramente ter a função de adicionar e remover produtos atraves do JavaScript. -->
             <!-- Sendo asim tornando o site mais dinamico e pratico para o cliente. -->
-            <div id="expositor" class="row">
+            <div id="expositor" class="row ">
+                <h2>Produtos</h2>
+
                 <!-- Aqui sera feita a construção dos produtos -->
                 <!-- Abrindo uma busca no SQL para achar os produtos -->
-                <?php include_once 'funcoesPHP/construtorProduto.php'; ?>
-                    
+                <table id="listaProdutos">
+                    <div class="divCentro">
+                        <div class="divPesquisaLista">
+                            <input id="pesquisaLista" type="text" placeholder="Pesquisar usuario...">
+                            <i class="material-icons">search</i>
+                        </div>
+                    </div>
+                    <?php include_once 'funcConstrutorProduto.php'; ?>
+                </table>
             </div>
         </div>
+        <!-- Faz a busca do usuario na Tabela -->
+<script>
+
+const INPUT_BUSCA = document.getElementById('pesquisaLista');
+const TABELA_BEBIDAS = document.getElementById('listaProdutos');
+
+INPUT_BUSCA.addEventListener('keyup', () => {
+    let expressao = INPUT_BUSCA.value.toLowerCase();
+
+    if (expressao.length === 1) {
+        return;
+    }
+
+    let linhas = TABELA_BEBIDAS.getElementsByTagName('tr');
+
+    for (let posicao in linhas) {
+        if (true === isNaN(posicao)) {
+            continue;
+        }
+
+        let conteudoDaLinha = linhas[posicao].innerHTML.toLowerCase();
+
+        if (true === conteudoDaLinha.includes(expressao)) {
+            linhas[posicao].style.display = '';
+        }else {
+            linhas[posicao].style.display = 'none';
+        }
+    }
+});
+</script>
 
     </body>
 </html>

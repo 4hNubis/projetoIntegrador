@@ -22,7 +22,7 @@
 <body>
         
     <?php include_once 'header.php'; 
-    include 'funcoesPHP/criaUsuario.php';
+    include 'funcCriaUsuario.php';
     ?>
     
     <div class="container">
@@ -31,7 +31,7 @@
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                     <div class="row">
                     </div>
-                    <div class="msgErro col s12 "><?php include 'funcoesPHP/erros.php'?></div>
+                    <div class="msgErro col s12 "><?php include 'funcErros.php'?></div>
                     <div class="col s12">
                         <div class="input-field col s12 l5 push-l1 ">
                             <input id="emailRegister" name="emailRegister" type="email">

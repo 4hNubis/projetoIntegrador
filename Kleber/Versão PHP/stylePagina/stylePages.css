@@ -1,8 +1,8 @@
-/* DekasConfeitaria Page */
+/* Header */
 
-header {
-    /* position: fixed; */
+header{
     width: 100%;
+    background-color: #ee6e73;
 }
 
 .navBar{
@@ -12,15 +12,15 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+
 }
 
 .divPesquisa{
-   display: inherit;  
-   border: solid 2px;
-   border-radius: 15px;
-   padding: 0px 10px;
-
-   align-items: center;
+    display: inherit;  
+    border: solid 2px;
+    border-radius: 15px;
+    padding: 0px 10px;
+    align-items: center;
 }
 #pesquisa{
     margin: 0;
@@ -31,6 +31,14 @@ header {
 
 }
 
+/* Menu Header */
+
+.navBar div.col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .navMenu{
     display: flex;
     flex-direction: row;
@@ -38,10 +46,27 @@ header {
     justify-content: space-around;
 }
 
-.nav-iten:hover{
+.nav-item:hover{
     background-color: #BA5659;
     box-shadow: 5px 5px rgba(83, 83, 83, 0.521);
 } 
+
+/* SubMenu Header */
+
+.navMenu .navSubMenu{
+    display: none;
+    position: absolute;
+}
+.navMenu .nav-item:hover .navSubMenu{
+    background: #BA5659;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+}
+
+
+/* DekasConfeitaria Page */
 
 div.container{
     margin-top: 100px;
@@ -51,26 +76,49 @@ div.container{
 
 /* Contrutor Produto */
 #produto{
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
+
 }
 
 img{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
 }
 
-/* Login Page */
+tr.col{
+    border: none;
+}
 
+/* Div Pesquisa em Lista */
 
+.divPesquisaLista{
+    width: 33%;
+    
+    display: flex;
+    flex-direction: row;  
+    border: solid 2px;
+    border-radius: 15px;
+    padding: 0px 10px;
+    align-items: center;
 
-/* Register Page */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
 
+#pesquisaLista{
+    margin: 0;
+    color: rgb(0, 0, 0);
+    background-color:transparent;
+    font-style:italic;
+    border:none;
+    
 
+}
 
 /* Mensagem de Erro */
 .msgErro{
@@ -80,4 +128,20 @@ img{
     
     font-style: italic;
     font-size: large;
+}
+
+/* Modal */
+
+div.modal div.modal-footer{
+    text-align: center;
+}
+
+/* Div */
+
+.divCentro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
 }

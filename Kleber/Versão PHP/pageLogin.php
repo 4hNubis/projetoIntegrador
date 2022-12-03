@@ -21,17 +21,16 @@
         <!-- Include´s -->
         <?php  
         include_once 'header.php'; 
-        include_once 'funcoesPHP\validacaoLogin.php';
+        include_once 'funcValidacaoLogin.php';
         ?>
 
-        <script>console.log('<?php echo session_id() ;?>')</script>
 
         <div class="container">
             <div class="row">
                 <div id="painelLogin" class="col s10 m10 l6 push-l3 push-m1 push-s1 card-panel">
                     <!-- Mensagem de erro -->
                     <br><br>
-                    <div class="msgErro col s12"><?php include 'funcoesPHP/erros.php' ?></div>
+                    <div class="msgErro col s12"><?php include 'funcErros.php' ?></div>
                     <!-- Validação do formulario mais o metodo "htmlspecialchars" -->
                     <!-- Assim evitando a fragilidade de fazer a validação na propria pagina PHP -->
                     <!-- Possivelmente evitaremos isso, modificando o metodo de validação para um mais seguro -->

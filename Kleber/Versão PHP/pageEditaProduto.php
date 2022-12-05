@@ -32,7 +32,7 @@
                             <i class="material-icons">search</i>
                         </div>
                         <div>
-                            <a href="" class="btn">Novo Produto</a>
+                            <a href="pageCriaProduto.php" class="btn">Novo Produto</a>
                         </div>
                     </div>
                     <?php include 'funcContrutorProdutoEditar.php';?>

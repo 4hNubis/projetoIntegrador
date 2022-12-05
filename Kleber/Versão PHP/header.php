@@ -12,10 +12,11 @@
             <ul id="navMenu" class="navMenu">
                 <li class="nav-item"><a href="index.php">Inicio</a></li>
                 <li class="nav-item"><a href="pageContato.php">Contato</a></li> 
-                <li id="subMenu" class="nav-item"><a href="pageLogin.php">Login</a></li>   
+                <li id="subMenu" class="nav-item"><a href="pageLogin.php">Login</a></li>
             </ul>
         </div>
     </nav>
+
 </header>
 
 

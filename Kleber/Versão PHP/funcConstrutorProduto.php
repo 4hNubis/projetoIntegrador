@@ -6,13 +6,12 @@
         while($dados =mysqli_fetch_array($resultado)):	
 ?>
             <!-- Esqueleto de produto -->   
-            <tr id="produto" class="col s12 m5 l3 card-panel">
+            <li nome="<?php echo $dados['nomeProdu']?>" class="col s12 m6 l4 card-panel">
                 <td class="imgProduto"><img id="img" src=<?php echo $dados['srcIMG'] ?> alt="brigadeiro"></td>
                 <td class="nomeProduto"><?php echo $dados['nomeProdu'] ?></td>
                 <td class="valorProduto"><?php echo $dados['valProdu'] ?></td>
                 <td><i class="material-icons"></i></td>
-            </tr>
-            <tr class="col s1"></tr>
+            </li>
         <?php 
         endwhile; 
         else: ?>

@@ -35,13 +35,17 @@
                         </div>
                     </div>
                 </div>
-                <table id="tabelaUsuarios" class="tabelaUsuarios">
-                    <tr>
-                        <th>ID</th>
-                        <th>NOME</th>
-                        <th>CPF</th>
-                        <th>EMAIL</th>
-                    </tr>
+                <table id="tabelaUsuarios" class="tabelaUsuarios centered striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>NOME</th>
+                            <th>CPF</th>
+                            <th>EMAIL</th>
+                            <th>Editar Usuario</th>
+                            <th>Apagar Usuario</th>
+                        </tr>
+                    </thead>
                     <?php include 'funcListaUsuarios.php'; ?>
                 </table>
             </div>

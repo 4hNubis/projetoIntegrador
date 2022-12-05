@@ -43,7 +43,7 @@
                         </div>
                         <div class="">
                             <img src="<?php echo $dados['srcIMG']?>">
-                            <form action="#">
+                            <!-- <form action="#">
                                 <div class="file-field input-field" style="display: flex; align-items: center; justify-content: center;">
                                     <div class="btn">
                                         <span>File</span>
@@ -53,13 +53,13 @@
                                         <input  class="file-path validate" type="text" value="<?php echo $dados['srcIMG']?>">
                                     </div>
                                 </div>
-                            </form>
+                            </form> -->
                         </div>
                         <div class="msgErro col s12 "><?php include 'funcErros.php'?></div>
                         <div class="col s12">
                             <div class="input-field col s12 l5 push-l1 ">
-                                <input name="nome" value="<?php echo $dados['nomeProdu'] ?>" type="text">
-                                <label for="nome" >Nome</label>
+                                <input name="nome" value="<?php echo $dados['nomeProdu'] ?>" type="text" data-length="10">
+                                <label for="nome" >Nome <span>0</span></label>
                             </div>
                             <div class="input-field col s12 l5 push-l1 ">
                                 <input name="valor" type="text" value="<?php echo $dados['valProdu'] ?>">
@@ -72,15 +72,15 @@
                                 <label for="peso">Peso</label>
                             </div>
                             <div class=" input-field col s12 l5 push-l1 ">
-                                <input name="dsc"  type="text" value="<?php echo $dados['dscProdu'] ?>">
+                                <input name="dsc" type="text" value="<?php echo $dados['dscProdu'] ?>">
                                 <label for="dsc">Descrição</label>
                             </div>
-                        </div>
-                        
+                            
 
+                        </div>
                         <div class="col s12">
                             <div class="col s6">
-                                <input type="hidden" name="idProduUpdate" value="<?php echo $dados['idProdu'] ?>">
+                                <input type="hidden" name="idProduUpdate" value="<?php echo $dados['idProdu']?>">
                                 <button name="btnUpdateProdu" type="submit" class="btn waves-effect waves-light col s8 push-s2">Confirmar Edição</button>
                             </div>
                             <div class=" col s6  ">
@@ -90,8 +90,24 @@
                     </form>
                 </div>
             </div>
-        </div>
-
-
+        </div>   
     </body>
+    <script>
+        const input = document.querySelector('input');
+        const counter = document.querySelector('span');
+        const char = document.querySelector('label')
+
+        counter.style.color='red',
+
+        input.addEventListener('input', e=>{
+            if (input.value.length < 20){
+                counter.innerText = input.value.length;
+            }else{
+                counter.innerText = 'max';
+                input.value = input.value.substring(0, 20)
+            }
+        })
+       
+
+    </script>
 </html>

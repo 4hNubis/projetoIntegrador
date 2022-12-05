@@ -28,7 +28,7 @@ if (isset($_POST['btRegistro'])):
         //criptografando a senha no mode BCrypt para salvar o hash criado no BD
         $senha = sha1($senha);
         // O insert com os dados que serão salvos no BD
-        $sql = "INSERT INTO usuario(idUsuario, CPF, email, senha, nomeUsuario, telefoneUsuario, CEP, numeroEnder, dscComple, admin) VALUES ( NULL, '$CPF', '$email', '$senha', '$nome', '$telefone', '$CEP', '$numero', '$dscComple', NULL)";
+        $sql = "INSERT INTO usuario(CPF, email, senha, nomeUsuario, telefoneUsuario, CEP, numeroEnder, dscComple, admin) VALUES ('$CPF', '$email', '$senha', '$nome', '$telefone', '$CEP', '$numero', '$dscComple', NULL)";
         // Executa o sql
         // Confirma se foi criado o novo Usuario
         if(mysqli_query($connect,$sql)):

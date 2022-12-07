@@ -1,6 +1,6 @@
 <?php
 
-include_once 'funcConnecDekasBD.php';
+include_once 'ativaBD.php';
 
 if(isset($_POST['btnApagarUsuario'])){
     $id = filter_var(mysqli_escape_string($connect, $_POST['idProduApagar']),FILTER_SANITIZE_NUMBER_INT);

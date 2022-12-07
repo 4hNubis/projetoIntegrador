@@ -23,82 +23,79 @@
         include_once 'header.php';
         ?>
        
-
-        <!-- Conteiner sera basicamente aonde sera montado todo o conteudo das paginas -->
-        <div class="container">
-            <!-- O Expositor De Produtos, como o nome sugere, será onde os produtos serão adicionados. -->
-            <!-- Podendo futuramente ter a função de adicionar e remover produtos atraves do JavaScript. -->
-            <!-- Sendo asim tornando o site mais dinamico e pratico para o cliente. -->
-            <div id="expositor" class="row ">
-                <h2>Produtos</h2>
-                <!-- Aqui sera feita a construção dos produtos -->
-                <!-- Abrindo uma busca no SQL para achar os produtos -->
-              
-                    <!-- <table id="listaProdutos"> -->
-                        <div class="divCentro">
-                            <div class="divPesquisaLista">
-                                <!-- <input id="pesquisaLista" type="text" placeholder="Pesquisar usuario..."> -->
-                                <input search="produto">
-                                <i class="material-icons">search</i>
+<!-- O conteiner -->
+<div class="container">
+    <!-- Vitrine de produtos -->
+    <div id="vitrine" >
+        <div class="header-vitrine">
+            <h3>Protudos</h3>
+            <div>
+                <nav class="pink lighten-2">
+                    <div class="nav-wrapper">
+                        <form>
+                            <div class="input-field">
+                                <input id="search" search="produto" type="search" required placeholder="Pesquisar ...">
+                                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                <i onclick="limpaInp()" class="material-icons">close</i>
                             </div>
-                        </div>
-                            <ul id="produto">
-                            <?php include_once 'funcConstrutorProduto.php'; ?>
-                            </ul>
-                        </div>
-                    <!-- </table> -->
-                
-                
+                        </form>
+                    </div>
+                </nav>
             </div>
         </div>
-        <!-- Faz a busca do usuario na Tabela -->
+        <div class="content-vitrine">
+            <ul id="produto" class="list-produto">
+                <?php
+                // Inicia o BD
+                include_once 'funcConnecDekasBD.php';
+                // Realiza a busca de todos os produtos ativos
+                $sql="SELECT * FROM produto WHERE estado=true";
+                $resultado= mysqli_query($connect,$sql);
+                if($resultado){
+                    mysqli_close($connect);
+                    if (mysqli_num_rows($resultado)>0){
+                        while($dados =mysqli_fetch_array($resultado)){
+                ?>
+                <!-- Esqueleto de produto  -->
+                <li nome="<?php echo $dados['nomeProdu']?>" class="list-produto-item card #eeeeee grey lighten-3">
+                    <div ><img id="img" src=<?php echo $dados['srcIMG'] ?> alt="brigadeiro"></div>
+                    <div class="list-produto-item-div"><h5><?php echo $dados['nomeProdu'] ?></h5></div>
+                    <div class="list-produto-item-div">R$<?php echo $dados['valProdu']?> POR KG</div>
+
+                    <!-- Descrição Produto -->
+                    <div class="list-produto-item-div"><span class="activator btn pink lighten-2">Mais Detalhes</span></div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Descrição do Produto<i class="material-icons right">close</i></span>
+                        <p><?php echo $dados['dscProdu']?></p>
+                    </div>
+                </li>       
+                <?php 
+                        }
+                    }
+                }
+                ?>
+            </ul>
+        </div>
+    </div>
+</div>
 <script>
+        for(i of document.querySelectorAll('[search]')){
+        try{
+            busca(i,document.querySelector("#"+i.getAttribute('search')))
+        }catch(e){}
+    }
 
-// const INPUT_BUSCA = document.getElementById('pesquisaLista');
-// const TABELA_BEBIDAS = document.getElementById('listaProdutos');
-
-// INPUT_BUSCA.addEventListener('keyup', () => {
-//     let expressao = INPUT_BUSCA.value.toLowerCase();
-
-//     if (expressao.length === 1) {
-//         return;
-//     }
-
-//     let linhas = TABELA_BEBIDAS.getElementsByTagName('ul');
-
-//     for (let posicao in linhas) {
-//         if (true === isNaN(posicao)) {
-//             continue;
-//         }
-
-//         let conteudoDaLinha = linhas[posicao].innerHTML.toLowerCase();
-
-//         if (true === conteudoDaLinha.includes(expressao)) {
-//             linhas[posicao].style.display = '';
-//         }else {
-//             linhas[posicao].style.display = 'none';
-//         }
-//     }
-// });
-
-for(i of document.querySelectorAll('[search]')){
-    try{
-        busca(i,document.querySelector("#"+i.getAttribute('search')))
-    }catch(e){}
-}
-
-function busca(input_field,div){
-    input_field.onkeyup=function(e){
-        for(di of div.children){
-            r  = new RegExp(this.value,"g")
-            if(di.getAttribute("nome").toLowerCase().match(r) != null)
-                di.style.removeProperty('display')
-            else
-                di.style.display = "none"
+    function busca(input_field,div){
+        input_field.onkeyup=function(e){
+            for(di of div.children){
+                r  = new RegExp(this.value,"g")
+                if(di.getAttribute("nome").toLowerCase().match(r) != null)
+                    di.style.removeProperty('display')
+                else
+                    di.style.display = "none"
+            }
         }
     }
-}
 </script>
-
     </body>
 </html>

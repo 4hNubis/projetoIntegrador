@@ -5,6 +5,7 @@ if(!empty($_SESSION['erros'])){
     $erros[] = $_SESSION['erros'];
     foreach($erros as $erro){
         echo $erro;
+        $_SESSION['erros'] = ''; 
     }
 }else{
 }

@@ -1,76 +1,58 @@
 <?php include_once 'header.php'?>
 
-<div class="container">
-            <div class="card-panel row">
-                <h3 class="center">Criando Produto</h3>
+<div class="container row">
+    <div class="card-panel col s12 m8 l6 push-l3 push-m2">
 
-                <br><br><br>
-                <form action="ativaCriaProduto.php" method="POST" enctype="multipart/form-data">
-                    <div class="col s12 push-s4">
-                        <a href="#inp" class="btn gree" id="btn">File</a>
-                        <input type="file" accept="imgProduto/*" id="inp" name="srcIMG">
-                        <img name="img" src="" id="img" class="center-align">
-                    </div>
-                    <div class="col s12">
-                        <div class="input-field col s12 l5 push-l1 ">
-                            <input name="nome" type="text" data-length="10">
-                            <label for="nome" >Nome do Produto</label>
-                        </div>
-                        <div class="input-field col s12 l5 push-l1 ">
-                            <input name="valor" type="text" >
-                            <label for="valor">Valor do Produto</label>
-                        </div>
-                    </div>
-                    <div class="col s12">
-                        <div class=" input-field col s12 l5 push-l1 ">
-                            <input name="peso"  type="text" >
-                            <label for="peso">Peso do Produto</label>
-                        </div>
-                        <div class=" input-field col s12 l5 push-l1 ">
-                            <input name="dsc" type="text">
-                            <label for="dsc">Descrição do Produto</label>
-                        </div>
-                    </div>
-                    <div class="col s12">
-                        <div class="col s6">
-                            <button name="btnCriaProdu" type="submit" class="btn waves-effect waves-light col s8 push-s2">Criar Produto</button>
-                        </div>
-                        <div class=" col s6  ">
-                            <a href="pageProduto.php" class="btn red">CANCELAR</a>
-                        </div>
-                    </div>
-                </form>
-                   
-                </div>
-            </div>
+        <h3 class="center">Criando Produto</h3>
+        <div>
+            <p class="center msgErro"><?php include_once 'ativaErro.php';?></p>
         </div>
 
-<!-- Vizualiza a img antes de fazer o UPLOAD no servidor -->
-<script>
-    let photo = document.getElementById('img');
-    let file = document.getElementById('inp');
-    let btn = document.getElementById('btn');
+        <form action="ativaProdutoCria.php" method="POST" enctype="multipart/form-data">
+            
+            <div class="input-field col s12 center">
+                <img name="img" src="" id="imgCarrega" class="center-align">
+                <div>
+                    <p>Imagem</p>
+                    <a class="btn gree col s8 m6 l4 push-l4 push-m3 push-s2" id="btnCarregaIMG" >File</a>
+                    <input type="file" accept="imgProduto/*" id="inpIMG" name="srcIMG">
+                </div>
+            </div>
 
-    btn.addEventListener('click', () => {
-        file.click();
-    });
+            <div class="input-filed col s12">
+                <div class="col s12 l5 push-l1 ">
+                    <input name="nome" type="text">
+                    <label for="nome" >Nome do Produto</label>
+                </div>
+                <div class=" col s12 l5 push-l1 ">
+                    <input name="valor" type="text" class="validate" maxlength="5" minlength="1">
+                    <label for="valor">Valor do Produto</label>
+                </div>
+            </div>
 
-    file.addEventListener('change', () => {
+            <div class="input-filed col s12 ">
+                <div class=" col s12 l5 push-l1 ">
+                    <input name="peso" type="text" class="validate" maxlength="2" >
+                    <label for="peso">Peso do Produto</label>
+                </div>
+                <div class="col s12 l5 push-l1 ">
+                    <input name="dsc" type="text" maxlength="300">
+                    <label for="dsc">Descrição do Produto</label>
+                </div>
+            </div>
 
-        if (file.files.length <= 0) {
-            return;
-        }
+            <div class="input-filed col s12">
+                <div class="col s12 m5 l5 input-field push-l1 push-m1">
+                    <button name="btnCriaProdu" type="submit" class="btn waves-effect waves-light col s12">Criar Produto</button>
+                </div>
+                <div class=" col s12 m5 l5 input-field push-l1 push-m1">
+                    <a href="index.php" class="btn red col s12">CANCELAR</a>
+                </div>
+            </div>
 
-        let reader = new FileReader();
+        </form>
+    </div>
+</div>
 
-        reader.onload = () => {
-            photo.src = reader.result;
-        }
-
-        reader.readAsDataURL(file.files[0]);
-    });
-
-
-</script>
 
 <?php include_once 'footer.php'?>

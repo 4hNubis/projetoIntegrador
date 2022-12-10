@@ -15,6 +15,8 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+
+    gap: .55rem;
 }
 
 .list-produto-item{
@@ -23,6 +25,8 @@
     align-items: center;
     justify-content: center;    
 
+    min-width: 300px;
+    max-width: 300px;
 
     padding: 1.55rem;
     border-top-right-radius: .95rem;
@@ -30,9 +34,24 @@
 }
 .list-produto-item-div{
     padding-top: 1.25rem;
-
+    
     align-items: center;
     justify-content: center;
+}
+
+.list-produto-item-footer{
+    padding-top: 1.50rem;
+
+    width: 16rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.form-footer{
+    display: flex;
+    padding: 3rem;
 }
 
 .msgErro{
@@ -42,14 +61,16 @@
 }
 
 .fundoRosa{
-    background-color: #f8bbd0;
-    padding-top: 10%;
+    background-color: #fce4ec;
 }
 
 img{
-    height: 250px;
-    width: 250px;
-    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: contain;
+    object-position: center;
 
     border-top-right-radius: .95rem;
     border-bottom-left-radius: .95rem;
@@ -59,33 +80,7 @@ input[type='file']{
     display: none;
 }
 
-div.modal div.modal-footer{
-    text-align: center;
+.border-rodanda{
+    border-radius: 0.95rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-img{
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-}

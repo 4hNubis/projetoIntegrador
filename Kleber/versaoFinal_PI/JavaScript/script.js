@@ -41,20 +41,69 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// CPF
-document.addEventListener('DOMContentLoaded', function(){
-    const inpCPF = document.getElementById('inpCPF')
+// Vizualizar a imagem antes de fazer o upload
+let btnIMG = document.getElementById('btnCarregaIMG');
+let photo = document.getElementById('imgCarrega');
+let file = document.getElementById('inpIMG');
 
-    inpCPF.addEventListener('keypress', () => {
-        let inputLength = inpCPF.value.length
+if(btnIMG){
+    btnIMG.addEventListener('click', clickFile);
+}
+function clickFile(){
+    file.click();
+    if(file.click){
+        file.addEventListener('change', () => {
+    
+            if (file.files.length <= 0) {
+                return;
+            }
+        
+            let reader = new FileReader();
+        
+            reader.onload = () => {
+                photo.src = reader.result;
+            }
+        
+            reader.readAsDataURL(file.files[0]);
+        });
+    }
+}
+
+// Formatação CPF
+
+const inputCPF = document.getElementById('inpCPF')
+
+if(inputCPF){
+    inputCPF.addEventListener('keypress', () => {
+        let inputLengthCPF = inputCPF.value.length
+
         // MAX LENGHT 14  CPF
-        if (inputLength == 3 || inputLength == 7) {
-            inpCPF.value += '.'
-        }else if (inputLength == 11) {
-            inpCPF.value += '-'
+        if (inputLengthCPF == 3 || inputLengthCPF == 7) {
+            inputCPF.value += '.'
+        }else if (inputLengthCPF == 11) {
+            inputCPF.value += '-'
         }
     })
-})
+}
+
+function convertCPF(){ 
+    let valCPF = document.getElementById('valCPF')
+    let textCPF = inputCPF.value
+    let intCPF = '';
+    intCPF += textCPF.substr(0,3)
+    intCPF += textCPF.substr(4,3)
+    intCPF += textCPF.substr(8,3)
+    intCPF += textCPF.substr(12)
+    
+    valCPF.value = parseInt(intCPF)
+
+    console.log(valCPF.value)
+    console.log(typeof(valCPF['value']))
+
+}
+
+
+
 
 // CEP
 function limpa_formulário_cep() {
@@ -120,4 +169,39 @@ else {
 };
 
 // Modal
+document.addEventListener('DOMContentLoaded',function(){
+    const elemsModal = document.querySelectorAll(".modal");
+    const instancesModal = M.Modal.init(elemsModal)
+})
 
+// Pesquisa de usuario em TABELA
+const INPUT_BUSCA = document.getElementById('pesquisaTabela');
+const TABELA_BEBIDAS = document.getElementById('tabelaUsuarios');
+
+if(INPUT_BUSCA){
+    INPUT_BUSCA.addEventListener('keyup', buscaTabela)
+}
+
+function buscaTabela(){
+    let expressao = INPUT_BUSCA.value.toLowerCase();
+
+    if (expressao.length === 1) {
+        return;
+    }
+
+    let linhas = TABELA_BEBIDAS.getElementsByTagName('tr');
+
+    for (let posicao in linhas) {
+        if (true === isNaN(posicao)) {
+            continue;
+        }
+
+        let conteudoDaLinha = linhas[posicao].innerHTML.toLowerCase();
+
+        if (true === conteudoDaLinha.includes(expressao)) {
+            linhas[posicao].style.display = '';
+        }else {
+            linhas[posicao].style.display = 'none';
+        }
+    }
+}

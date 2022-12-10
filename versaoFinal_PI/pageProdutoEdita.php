@@ -2,25 +2,15 @@
 include_once 'header.php';
 include_once 'ativaBD.php';
 
-if(!isset($_POST['btnProdutoEdita'])){
 
-    if(!isset($_SESSION['idProduEdita'])){
-        $_SESSION['idProduEdita'] = $_POST['idProduEdita'];
-         $idProdu = $_SESSION['idProduEdita'];
-        $idProdu = mysqli_escape_string($connect,$idProdu);
-        $sqlProdu= "SELECT * FROM produto WHERE idProdu= '$idProdu'";
-        if($resultado = mysqli_query($connect, $sqlProdu)){
-            $dados = mysqli_fetch_array($resultado);
-            mysqli_close($connect);
-        }
-    }else{
-        $idProdu = $_SESSION['idProduEdita'];
-        $idProdu = mysqli_escape_string($connect,$idProdu);
-        $sqlProdu= "SELECT * FROM produto WHERE idProdu= '$idProdu'";
-        if($resultado = mysqli_query($connect, $sqlProdu)){
-            $dados = mysqli_fetch_array($resultado);
-            mysqli_close($connect);
-        }
+if(!isset($_POST['btnProdutoEdita'])){
+    $_SESSION['idProduEdita'] = $_POST['idProduEdita'];
+    $idProdu = $_SESSION['idProduEdita'];
+    $idProdu = mysqli_escape_string($connect,$idProdu);
+    $sqlProdu= "SELECT * FROM produto WHERE idProdu= '$idProdu'";
+    if($resultado = mysqli_query($connect, $sqlProdu)){
+        $dados = mysqli_fetch_array($resultado);
+        mysqli_close($connect);
     }
 }
 ?>

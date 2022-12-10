@@ -22,6 +22,8 @@ if (isset($_POST['btnRegistro'])){
     $CEP = mysqli_escape_string($connect, $_POST['cep']);
 	$numero = mysqli_escape_string($connect, $_POST['numero']);
     $dscComple = mysqli_escape_string($connect, $_POST['dscComple']);
+
+    $CPF = intval($CPF);
     
     if(empty($email) || empty($senha) || empty($nome) || empty($CPF) || empty($telefone) || empty($CEP) || empty($numero)){
 
@@ -32,7 +34,7 @@ if (isset($_POST['btnRegistro'])){
         //criptografando a senha no mode BCrypt para salvar o hash criado no BD
         $senha = password_hash($senha, PASSWORD_BCRYPT);
         // O insert com os dados que serão salvos no BD
-        $sql = "INSERT INTO usuario(CPF, email, senha, nomeUsuario, telefoneUsuario, CEP, numeroEnder, dscComple, admin) VALUES ('$CPF', '$email', '$senha', '$nome', '$telefone', '$CEP', '$numero', '$dscComple', NULL)";
+        $sql = "INSERT INTO usuario(CPF, email, senha, nomeUsuario, telefoneUsuario, CEP, numeroEnder, dscComple) VALUES ('$CPF', '$email', '$senha', '$nome', '$telefone', '$CEP', '$numero', '$dscComple')";
         // Executa o sql
         // Confirma se foi criado o novo Usuario
         if(mysqli_query($connect,$sql)){
@@ -41,9 +43,6 @@ if (isset($_POST['btnRegistro'])){
         }else{
             $_SESSION['erros'] = $erros[] = "Não foi possivel criar usuario";
             header('Location: pageUsuarioRegister.php');
-            if(mysqli_error($connect)):
-                echo "Falha na conexão: ". mysqli_error($connect);
-            endif;
         }
 
     }

@@ -34,22 +34,20 @@ if(isset($_POST['btnProduEditado'])){
             $temporario = $_FILES['srcIMG']['tmp_name'];
             $novoNome= uniqid().".$extensao"; //Novo nome que sera atriuido ao FILE
         
-            $sql="UPDATE produto SET nomeProdu='$nomeProdu',valProdu='$valProdu', pesoProdu='$pesoProdu', dscProdu='$dscProdu', srcIMG='$pasta$novoNome' WHERE idProdu=$id";
+            $sql="UPDATE produto SET nomeProdu='$nomeProdu',valProdu='$valProdu', pesoProdu='$pesoProdu', dscProdu='$dscProdu', srcIMG='$pasta$novoNome' WHERE idProdu='$id'";
             
             if(move_uploaded_file($temporario,$pasta.$novoNome) && mysqli_query($connect,$sql)){
                 header('Location: index.php');
-                $_SESSION['idProdu'] = '';
                 mysqli_close($connect);
             }
         }else{
-            $sql="UPDATE produto SET nomeProdu='$nomeProdu',valProdu='$valProdu', pesoProdu='$pesoProdu', dscProdu='$dscProdu' WHERE idProdu=$id";
+            $sql="UPDATE produto SET nomeProdu='$nomeProdu',valProdu='$valProdu', pesoProdu='$pesoProdu', dscProdu='$dscProdu' WHERE idProdu='$id'";
+            $resultSQL = mysqli_query($connect, $sql);
             if(mysqli_query($connect, $sql)){
                 header('Location: index.php');
-                $_SESSION['idProdu'] = '';
                 mysqli_close($connect);
             }
         }
-        
     }
 }else{
     header('Location: pageEditaProduto.php');

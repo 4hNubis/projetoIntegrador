@@ -1,4 +1,4 @@
-<? 
+<?php  
 include_once 'header.php';
 include_once 'ativaBD.php';
 
@@ -28,38 +28,38 @@ if(isset($_POST['btnUsuarioEdita'])){
             <form action="ativaUsuarioEdita.php" method="POST">
                 <div class="col s12">
                     <div class="input-field col s12 l5 push-l1 ">
-                        <input name="email" class="validate" value="<?echo $dadosUsu['email'] ?>" type="email">
+                        <input name="email" class="validate" value="<?php echo $dadosUsu['email'] ?>" type="email">
                         <label for="email" >Email</label>
                     </div>
                     <div class="input-field col s12 l5 push-l1 ">
-                        <input name="senha" class="validate" type="password" minlength="8" value="<?echo $dadosUsu['senha']?>">
+                        <input name="senha" class="validate" type="password" minlength="8" value="<?php echo $dadosUsu['senha']?>">
                         <label for="senha">Senha</label>
                     </div>
                 </div>
                 <div class="col s12">
                     <div class=" input-field col s12 l5 push-l1 ">
-                        <input name="nome" type="text" value="<?echo $dadosUsu['nomeUsuario']?>" minlength="3">
+                        <input name="nome" type="text" value="<?php echo $dadosUsu['nomeUsuario']?>" minlength="3">
                         <label for="nome">Nome</label>
                     </div>
                     <div class=" input-field col s12 l5 push-l1" >
                         <input type="hidden" name="valCPF" id="valCPF" >
-                        <input id="inpCPF" name="CPF" type="text" onclick="convertCPF()" value="<?echo $dadosUsu['CPF']?>" placeholder="xxx.xxx.xxx-xx" autocomplete="off" maxlength="14" minlength="14">
+                        <input id="inpCPF" name="CPF" type="text" onclick="convertCPF()" value="<?php echo $dadosUsu['CPF']?>" placeholder="xxx.xxx.xxx-xx" autocomplete="off" maxlength="14" minlength="14">
                         <label for="CPF">CPF</label>
                     </div>
                 </div>
                 <div class="col s12">
                     <div class=" input-field col s12 l5 push-l1 ">
-                        <input name="telefone"  placeholder="9xxxx-xxxx" type="tel" value="<?echo $dadosUsu['telefoneUsuario']?>" maxlength="9">
+                        <input name="telefone"  placeholder="9xxxx-xxxx" type="tel" value="<?php echo $dadosUsu['telefoneUsuario']?>" maxlength="9">
                         <label for="telefone">Telefone</label>
                     </div>
                     <div class=" input-field col s12 l5 push-l1 ">
-                        <input name="cep" id="cep" value="<?$dadosUsu['CEP']?>" onblur="pesquisacep(this.value);" type="text">
+                        <input type="text" name="cep" id="cep" value="<?php echo $dadosUsu['CEP']?>" onblur="pesquisacep(this.value);" >
                         <label for="cep">CEP</label>
                     </div>
                 </div>
                 <div class="col s12">
                     <div class=" input-field col s12 l5 push-l1 ">
-                        <input name="numero" id="numero" value="<?echo $dadosUsu['numeroEnder']?>" type="number">
+                        <input name="numero" id="numero" value="<?php echo $dadosUsu['numeroEnder']?>" type="number">
                         <label for="numero">Número</label>
                     </div>
                     <div class=" input-field col s12 l5 push-l1 ">
@@ -79,7 +79,7 @@ if(isset($_POST['btnUsuarioEdita'])){
                 </div>
                     <div class="col s12 push-l3">
                     <div class=" input-field col s12 l6 ">
-                        <input name="dscComple" type="text" value="<?echo $dadosUsu['dscComple']?>">
+                        <input name="dscComple" type="text" value="<?php echo $dadosUsu['dscComple']?>">
                         <label for="dscComple">Ponto de referencia</label>
                     </div>
                 </div>

@@ -32,11 +32,11 @@
                 </div>
                 <div class="col s12">
                     <div class=" input-field col s12 l5 push-l1 ">
-                        <input name="telefone"  placeholder="9xxxx-xxxx" type="tel" maxlength="9">
+                        <input name="telefone"  placeholder="9xxxx-xxxx" type="tel" maxlength="9" minlength="9">
                         <label for="telefone">Telefone</label>
                     </div>
                     <div class=" input-field col s12 l5 push-l1 ">
-                        <input name="cep" id="cep" value="" onblur="pesquisacep(this.value);" maxlength="9" minlength="8" type="text">
+                        <input name="cep" id="cep" value="" onblur="pesquisacep(this.value);" maxlength="8" minlength="8" type="text">
                         <label for="cep">CEP</label>
                     </div>
                 </div>

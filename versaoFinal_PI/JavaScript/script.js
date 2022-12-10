@@ -96,10 +96,6 @@ function convertCPF(){
     intCPF += textCPF.substr(12)
     
     valCPF.value = parseInt(intCPF)
-
-    console.log(valCPF.value)
-    console.log(typeof(valCPF['value']))
-
 }
 
 

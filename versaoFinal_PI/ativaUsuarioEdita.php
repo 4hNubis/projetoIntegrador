@@ -27,7 +27,7 @@ if(isset($_POST['btnUsuarioEditado'])):
         $senha = password_hash($senha, PASSWORD_BCRYPT);
     }
     
-    $sql="UPDATE usuario SET CPF='$CPF',email='$email',senha='$senha',nomeUsuario='$nome',telefoneUsuario='$telefone',CEP='$CEP',numeroEnder='$numero',dscComple='$dscComple' WHERE idUsuario='$id'";
+    $sql="UPDATE usuario SET CPF='$CPF',email='$email',senha='$senha',nomeUsuario='$nome',telefoneUsuario='$telefone',CEP='$CEP',numeroEnder='$numero',dscComple='$dscComple' WHERE idUsuario=$id";
     if(mysqli_query($connect,$sql)):
 		header('Location: pageUsuarioLista.php');
     endif;

@@ -25,7 +25,7 @@
                         <label for="nome">Nome</label>
                     </div>
                     <div class=" input-field col s12 l5 push-l1 ">
-                        <input type="hidden" name="valCPF" id="valCPF">
+                        <input type="hidden" name="valCPF"  id="valCPF">
                         <input id="inpCPF" name="CPF" type="text" placeholder="xxx.xxx.xxx-xx" onblur="convertCPF()" autocomplete="off" maxlength="14" minlength="14">
                         <label for="CPF">CPF</label>
                     </div>

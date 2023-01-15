@@ -42,7 +42,7 @@ if(isset($_POST['btnUsuarioEdita'])){
                         <label for="nome">Nome</label>
                     </div>
                     <div class=" input-field col s12 l5 push-l1" >
-                        <input type="hidden" name="valCPF" id="valCPF" >
+                        <input type="hidden" name="valCPF" id="valCPF" value="<?php echo $dadosUsu['CPF']?>" >
                         <input id="inpCPF" name="CPF" type="text" onclick="convertCPF()" value="<?php echo $dadosUsu['CPF']?>" placeholder="xxx.xxx.xxx-xx" autocomplete="off" maxlength="14" minlength="14">
                         <label for="CPF">CPF</label>
                     </div>

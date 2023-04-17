@@ -1,0 +1,5 @@
+[Mon Apr 17 13:26:27.487668 2023] [mpm_winnt:notice] [pid 24232:tid 976] AH00455: Apache/2.4.48 (Win32) PHP/8.0.7 configured -- resuming normal operations
+[Mon Apr 17 13:26:27.487668 2023] [mpm_winnt:notice] [pid 24232:tid 976] AH00456: Apache Lounge VS16 Server built: May 18 2021 10:18:16
+[Mon Apr 17 13:26:27.487668 2023] [core:notice] [pid 24232:tid 976] AH00094: Command line: 'C:\\Users\\klebe\\Documents\\GitHub\\projetoIntegrador\\ProjetoIntegradorCorrigido\\USBWeb/apache2/bin/httpd_usbwv8.exe -d C:/Users/klebe/Documents/GitHub/projetoIntegrador/ProjetoIntegradorCorrigido/USBWeb/apache2'
+[Mon Apr 17 13:26:27.493676 2023] [mpm_winnt:notice] [pid 24232:tid 976] AH00418: Parent: Created child process 5312
+[Mon Apr 17 13:26:27.979797 2023] [mpm_winnt:notice] [pid 5312:tid 868] AH00354: Child: Starting 64 worker threads.

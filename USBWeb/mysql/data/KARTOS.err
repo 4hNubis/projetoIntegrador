@@ -1,0 +1,140 @@
+2022-12-10 15:08:49 14684 [Note] Plugin 'FEDERATED' is disabled.
+2022-12-10 15:08:49 14684 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2022-12-10 15:08:49 14684 [Note] InnoDB: The InnoDB memory heap is disabled
+2022-12-10 15:08:49 14684 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2022-12-10 15:08:49 14684 [Note] InnoDB: Memory barrier is not used
+2022-12-10 15:08:49 14684 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2022-12-10 15:08:49 14684 [Note] InnoDB: Not using CPU crc32 instructions
+2022-12-10 15:08:49 14684 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2022-12-10 15:08:49 14684 [Note] InnoDB: Completed initialization of buffer pool
+2022-12-10 15:08:49 14684 [Note] InnoDB: Highest supported file format is Barracuda.
+2022-12-10 15:08:49 14684 [Note] InnoDB: The log sequence numbers 1625977 and 1625977 in ibdata files do not match the log sequence number 1626027 in the ib_logfiles!
+2022-12-10 15:08:49 14684 [Note] InnoDB: Database was not shutdown normally!
+2022-12-10 15:08:49 14684 [Note] InnoDB: Starting crash recovery.
+2022-12-10 15:08:49 14684 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2022-12-10 15:08:49 14684 [Note] InnoDB: Restoring possible half-written data pages 
+2022-12-10 15:08:49 14684 [Note] InnoDB: from the doublewrite buffer...
+2022-12-10 15:08:49 14684 [Note] InnoDB: 128 rollback segment(s) are active.
+2022-12-10 15:08:49 14684 [Note] InnoDB: Waiting for purge to start
+2022-12-10 15:08:49 14684 [Note] InnoDB: 5.6.51 started; log sequence number 1626027
+2022-12-10 15:08:49 14684 [Note] RSA private key file not found: C:\Users\klebe\Downloads\USBWebserver v8.6.6\mysql\data\\private_key.pem. Some authentication plugins will not work.
+2022-12-10 15:08:49 14684 [Note] RSA public key file not found: C:\Users\klebe\Downloads\USBWebserver v8.6.6\mysql\data\\public_key.pem. Some authentication plugins will not work.
+2022-12-10 15:08:49 14684 [Note] Server hostname (bind-address): '*'; port: 3306
+2022-12-10 15:08:49 14684 [Note] IPv6 is available.
+2022-12-10 15:08:49 14684 [Note]   - '::' resolves to '::';
+2022-12-10 15:08:49 14684 [Note] Server socket created on IP: '::'.
+2022-12-10 15:08:49 14684 [Note] Event Scheduler: Loaded 0 events
+2022-12-10 15:08:49 14684 [Note] C:\Users\klebe\Downloads\USBWebserver v8.6.6/mysql/bin/mysqld_usbwv8.exe: ready for connections.
+Version: '5.6.51'  socket: ''  port: 3306  MySQL Community Server (GPL)
+2022-12-10 15:09:33 12848 [Note] Plugin 'FEDERATED' is disabled.
+2022-12-10 15:09:33 12848 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2022-12-10 15:09:33 12848 [Note] InnoDB: The InnoDB memory heap is disabled
+2022-12-10 15:09:33 12848 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2022-12-10 15:09:33 12848 [Note] InnoDB: Memory barrier is not used
+2022-12-10 15:09:33 12848 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2022-12-10 15:09:33 12848 [Note] InnoDB: Not using CPU crc32 instructions
+2022-12-10 15:09:33 12848 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2022-12-10 15:09:33 12848 [Note] InnoDB: Completed initialization of buffer pool
+2022-12-10 15:09:33 12848 [Note] InnoDB: Highest supported file format is Barracuda.
+2022-12-10 15:09:33 12848 [Note] InnoDB: The log sequence numbers 1625977 and 1625977 in ibdata files do not match the log sequence number 1626037 in the ib_logfiles!
+2022-12-10 15:09:33 12848 [Note] InnoDB: Database was not shutdown normally!
+2022-12-10 15:09:33 12848 [Note] InnoDB: Starting crash recovery.
+2022-12-10 15:09:33 12848 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2022-12-10 15:09:33 12848 [Note] InnoDB: Restoring possible half-written data pages 
+2022-12-10 15:09:33 12848 [Note] InnoDB: from the doublewrite buffer...
+2022-12-10 15:09:34 12848 [Note] InnoDB: 128 rollback segment(s) are active.
+2022-12-10 15:09:34 12848 [Note] InnoDB: Waiting for purge to start
+2022-12-10 15:09:34 12848 [Note] InnoDB: 5.6.51 started; log sequence number 1626037
+2022-12-10 15:09:34 12848 [Note] RSA private key file not found: C:\Users\klebe\Documents\USBWebserver v8.6.6\mysql\data\\private_key.pem. Some authentication plugins will not work.
+2022-12-10 15:09:34 12848 [Note] RSA public key file not found: C:\Users\klebe\Documents\USBWebserver v8.6.6\mysql\data\\public_key.pem. Some authentication plugins will not work.
+2022-12-10 15:09:34 12848 [Note] Server hostname (bind-address): '*'; port: 3306
+2022-12-10 15:09:34 12848 [Note] IPv6 is available.
+2022-12-10 15:09:34 12848 [Note]   - '::' resolves to '::';
+2022-12-10 15:09:34 12848 [Note] Server socket created on IP: '::'.
+2022-12-10 15:09:34 12848 [Note] Event Scheduler: Loaded 0 events
+2022-12-10 15:09:34 12848 [Note] C:\Users\klebe\Documents\USBWebserver v8.6.6/mysql/bin/mysqld_usbwv8.exe: ready for connections.
+Version: '5.6.51'  socket: ''  port: 3306  MySQL Community Server (GPL)
+2022-12-10 16:53:10 4148 [Note] Plugin 'FEDERATED' is disabled.
+2022-12-10 16:53:10 4148 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2022-12-10 16:53:10 4148 [Note] InnoDB: The InnoDB memory heap is disabled
+2022-12-10 16:53:10 4148 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2022-12-10 16:53:10 4148 [Note] InnoDB: Memory barrier is not used
+2022-12-10 16:53:10 4148 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2022-12-10 16:53:10 4148 [Note] InnoDB: Not using CPU crc32 instructions
+2022-12-10 16:53:10 4148 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2022-12-10 16:53:10 4148 [Note] InnoDB: Completed initialization of buffer pool
+2022-12-10 16:53:10 4148 [Note] InnoDB: Highest supported file format is Barracuda.
+2022-12-10 16:53:10 4148 [Note] InnoDB: The log sequence numbers 1625977 and 1625977 in ibdata files do not match the log sequence number 1767169 in the ib_logfiles!
+2022-12-10 16:53:10 4148 [Note] InnoDB: Database was not shutdown normally!
+2022-12-10 16:53:10 4148 [Note] InnoDB: Starting crash recovery.
+2022-12-10 16:53:10 4148 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2022-12-10 16:53:10 4148 [Note] InnoDB: Restoring possible half-written data pages 
+2022-12-10 16:53:10 4148 [Note] InnoDB: from the doublewrite buffer...
+2022-12-10 16:53:11 4148 [Note] InnoDB: 128 rollback segment(s) are active.
+2022-12-10 16:53:11 4148 [Note] InnoDB: Waiting for purge to start
+2022-12-10 16:53:11 4148 [Note] InnoDB: 5.6.51 started; log sequence number 1767169
+2022-12-10 16:53:11 4148 [Note] RSA private key file not found: C:\Users\klebe\Documents\USBWeb\mysql\data\\private_key.pem. Some authentication plugins will not work.
+2022-12-10 16:53:11 4148 [Note] RSA public key file not found: C:\Users\klebe\Documents\USBWeb\mysql\data\\public_key.pem. Some authentication plugins will not work.
+2022-12-10 16:53:11 4148 [Note] Server hostname (bind-address): '*'; port: 3306
+2022-12-10 16:53:11 4148 [Note] IPv6 is available.
+2022-12-10 16:53:11 4148 [Note]   - '::' resolves to '::';
+2022-12-10 16:53:11 4148 [Note] Server socket created on IP: '::'.
+2022-12-10 16:53:11 4148 [Note] Event Scheduler: Loaded 0 events
+2022-12-10 16:53:11 4148 [Note] C:\Users\klebe\Documents\USBWeb/mysql/bin/mysqld_usbwv8.exe: ready for connections.
+Version: '5.6.51'  socket: ''  port: 3306  MySQL Community Server (GPL)
+2022-12-10 18:55:06 7608 [Note] Plugin 'FEDERATED' is disabled.
+2022-12-10 18:55:06 7608 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2022-12-10 18:55:06 7608 [Note] InnoDB: The InnoDB memory heap is disabled
+2022-12-10 18:55:06 7608 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2022-12-10 18:55:06 7608 [Note] InnoDB: Memory barrier is not used
+2022-12-10 18:55:06 7608 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2022-12-10 18:55:06 7608 [Note] InnoDB: Not using CPU crc32 instructions
+2022-12-10 18:55:06 7608 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2022-12-10 18:55:06 7608 [Note] InnoDB: Completed initialization of buffer pool
+2022-12-10 18:55:06 7608 [Note] InnoDB: Highest supported file format is Barracuda.
+2022-12-10 18:55:06 7608 [Note] InnoDB: The log sequence numbers 1625977 and 1625977 in ibdata files do not match the log sequence number 1767179 in the ib_logfiles!
+2022-12-10 18:55:06 7608 [Note] InnoDB: Database was not shutdown normally!
+2022-12-10 18:55:06 7608 [Note] InnoDB: Starting crash recovery.
+2022-12-10 18:55:06 7608 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2022-12-10 18:55:06 7608 [Note] InnoDB: Restoring possible half-written data pages 
+2022-12-10 18:55:06 7608 [Note] InnoDB: from the doublewrite buffer...
+2022-12-10 18:55:06 7608 [Note] InnoDB: 128 rollback segment(s) are active.
+2022-12-10 18:55:06 7608 [Note] InnoDB: Waiting for purge to start
+2022-12-10 18:55:07 7608 [Note] InnoDB: 5.6.51 started; log sequence number 1767179
+2022-12-10 18:55:07 7608 [Note] RSA private key file not found: C:\Users\klebe\Documents\USBWeb\mysql\data\\private_key.pem. Some authentication plugins will not work.
+2022-12-10 18:55:07 7608 [Note] RSA public key file not found: C:\Users\klebe\Documents\USBWeb\mysql\data\\public_key.pem. Some authentication plugins will not work.
+2022-12-10 18:55:07 7608 [Note] Server hostname (bind-address): '*'; port: 3306
+2022-12-10 18:55:07 7608 [Note] IPv6 is available.
+2022-12-10 18:55:07 7608 [Note]   - '::' resolves to '::';
+2022-12-10 18:55:07 7608 [Note] Server socket created on IP: '::'.
+2022-12-10 18:55:07 7608 [Note] Event Scheduler: Loaded 0 events
+2022-12-10 18:55:07 7608 [Note] C:\Users\klebe\Documents\USBWeb/mysql/bin/mysqld_usbwv8.exe: ready for connections.
+Version: '5.6.51'  socket: ''  port: 3306  MySQL Community Server (GPL)
+2023-04-17 13:26:27 3528 [Note] Plugin 'FEDERATED' is disabled.
+2023-04-17 13:26:27 3528 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2023-04-17 13:26:27 3528 [Note] InnoDB: The InnoDB memory heap is disabled
+2023-04-17 13:26:27 3528 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2023-04-17 13:26:27 3528 [Note] InnoDB: Memory barrier is not used
+2023-04-17 13:26:27 3528 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2023-04-17 13:26:27 3528 [Note] InnoDB: Not using CPU crc32 instructions
+2023-04-17 13:26:27 3528 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2023-04-17 13:26:27 3528 [Note] InnoDB: Completed initialization of buffer pool
+2023-04-17 13:26:27 3528 [Note] InnoDB: Highest supported file format is Barracuda.
+2023-04-17 13:26:27 3528 [Note] InnoDB: The log sequence numbers 1625977 and 1625977 in ibdata files do not match the log sequence number 1893048 in the ib_logfiles!
+2023-04-17 13:26:27 3528 [Note] InnoDB: Database was not shutdown normally!
+2023-04-17 13:26:27 3528 [Note] InnoDB: Starting crash recovery.
+2023-04-17 13:26:27 3528 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2023-04-17 13:26:27 3528 [Note] InnoDB: Restoring possible half-written data pages 
+2023-04-17 13:26:27 3528 [Note] InnoDB: from the doublewrite buffer...
+2023-04-17 13:26:27 3528 [Note] InnoDB: 128 rollback segment(s) are active.
+2023-04-17 13:26:27 3528 [Note] InnoDB: Waiting for purge to start
+2023-04-17 13:26:27 3528 [Note] InnoDB: 5.6.51 started; log sequence number 1893048
+2023-04-17 13:26:27 3528 [Note] RSA private key file not found: C:\Users\klebe\Documents\GitHub\projetoIntegrador\ProjetoIntegradorCorrigido\USBWeb\mysql\data\\private_key.pem. Some authentication plugins will not work.
+2023-04-17 13:26:27 3528 [Note] RSA public key file not found: C:\Users\klebe\Documents\GitHub\projetoIntegrador\ProjetoIntegradorCorrigido\USBWeb\mysql\data\\public_key.pem. Some authentication plugins will not work.
+2023-04-17 13:26:27 3528 [Note] Server hostname (bind-address): '*'; port: 3306
+2023-04-17 13:26:27 3528 [Note] IPv6 is available.
+2023-04-17 13:26:27 3528 [Note]   - '::' resolves to '::';
+2023-04-17 13:26:27 3528 [Note] Server socket created on IP: '::'.
+2023-04-17 13:26:27 3528 [Note] Event Scheduler: Loaded 0 events
+2023-04-17 13:26:27 3528 [Note] C:\Users\klebe\Documents\GitHub\projetoIntegrador\ProjetoIntegradorCorrigido\USBWeb/mysql/bin/mysqld_usbwv8.exe: ready for connections.
+Version: '5.6.51'  socket: ''  port: 3306  MySQL Community Server (GPL)
